@@ -24,4 +24,24 @@ class Day03Test : FunSpec({
         println("Day 03 Part 1 Result: $result")
         result shouldBe 17244
     }
+
+    test("Day 03 Part 2 Example") {
+        val input = listOf(
+            "987654321111111",
+            "811111111111119",
+            "234234234234278",
+            "818181911112111"
+        )
+        val day03 = Day03()
+        day03.solvePart2(input) shouldBe 3121910778619L
+    }
+
+    test("Day 03 Part 2 Real Input") {
+        val input = InputReader.readInput("03")
+        val day03 = Day03()
+        val result = day03.solvePart2(input)
+
+        println("Day 03 Part 2 Result: $result")
+        result shouldBe 171435596092638L
+    }
 })
