@@ -1,22 +1,22 @@
 package ch.rjenni.aoc2025.utils
 
-import java.io.File
-import java.net.URL
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class InputReader {
     companion object {
         fun readInput(day: String): List<String> {
             val fileName = "day$day.txt"
-            val resource: URL = InputReader::class.java.classLoader.getResource(fileName)
+            val stream = InputReader::class.java.classLoader.getResourceAsStream(fileName)
                 ?: throw IllegalArgumentException("File not found: $fileName")
-            return File(resource.toURI()).readLines()
+            return BufferedReader(InputStreamReader(stream)).readLines()
         }
 
         fun readInputAsString(day: String): String {
             val fileName = "day$day.txt"
-            val resource: URL = InputReader::class.java.classLoader.getResource(fileName)
+            val stream = InputReader::class.java.classLoader.getResourceAsStream(fileName)
                 ?: throw IllegalArgumentException("File not found: $fileName")
-            return File(resource.toURI()).readText()
+            return BufferedReader(InputStreamReader(stream)).readText()
         }
     }
 }

@@ -20,15 +20,41 @@ class Day01Test : FunSpec({
             "L82"
         )
         val day01 = Day01()
-        val result = day01.solve(input)
+        val result = day01.solvePart1(input)
         result shouldBe 3
     }
 
     test("Day 01 Real Input") {
         val input = InputReader.readInput("01")
         val day01 = Day01()
-        val result = day01.solve(input)
+        val result = day01.solvePart1(input)
 
         result shouldBe 1007
+    }
+
+    test("Day 01 Part 2 Example") {
+        val input = listOf(
+            "L68",
+            "L30",
+            "R48",
+            "L5",
+            "R60",
+            "L55",
+            "L1",
+            "L99",
+            "R14",
+            "L82"
+        )
+        val day01 = Day01()
+        val result = day01.solvePart2(input)
+        result shouldBe 6
+    }
+
+    test("Day 01 Part 2 Real Input") {
+        val input = InputReader.readInput("01")
+        val day01 = Day01()
+        val result = day01.solvePart2(input)
+
+        result shouldBe 5820
     }
 })
