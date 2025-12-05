@@ -26,7 +26,34 @@ class Day04Test : FunSpec({
         val input = InputReader.readInput("04")
         val day04 = Day04()
         val result = day04.solvePart1(input)
-
+        
+        println("Day 04 Part 1 Result: $result")
         result shouldBe 1578
+    }
+
+    test("Day 04 Part 2 Example") {
+        val input = listOf(
+            "..@@.@@@@.",
+            "@@@.@.@.@@",
+            "@@@@@.@.@@",
+            "@.@@@@..@.",
+            "@@.@@@@.@@",
+            ".@@@@@@@.@",
+            ".@.@.@.@@@",
+            "@.@@@.@@@@",
+            ".@@@@@@@@.",
+            "@.@.@@@.@."
+        )
+        val day04 = Day04()
+        day04.solvePart2(input) shouldBe 43
+    }
+
+    test("Day 04 Part 2 Real Input") {
+        val input = InputReader.readInput("04")
+        val day04 = Day04()
+        val result = day04.solvePart2(input)
+
+        println("Day 04 Part 2 Result: $result")
+        result shouldBe 10132
     }
 })
