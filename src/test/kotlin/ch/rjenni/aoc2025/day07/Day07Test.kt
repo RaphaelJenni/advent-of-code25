@@ -34,4 +34,31 @@ class Day07Test : FunSpec({
         println("Day 07 Part 1 Result: $result")
          result shouldBe 1703
     }
+    test("Day 07 Part 2 Example") {
+        val input = listOf(
+            ".......S.......",
+            "...............",
+            ".......^.......",
+            "...............",
+            "......^.^......",
+            "...............",
+            ".....^.^.^.....",
+            "...............",
+            "....^.^...^....",
+            "...............",
+            "...^.^...^.^...",
+            "...............",
+            "..^...^.....^..",
+            "...............",
+            ".^.^.^.^.^...^.",
+            "..............."
+        )
+        Day07().solvePart2(input) shouldBe 40
+    }
+    test("Day 07 Part 2 Real Input") {
+        val input = InputReader.readInput("07")
+        val result = Day07().solvePart2(input)
+        println("Day 07 Part 2 Result: $result")
+        result shouldBe 171692855075500L
+    }
 })
